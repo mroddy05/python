@@ -11,40 +11,40 @@ class Television:
         self.__channel = self.min_channel
 
     def power(self):
-        if self.status == False:
-            self.status = True
+        if self.__status == False:
+            self.__status = True
         else:
-            self.status = False
+            self.__status = False
 
     def mute(self):
-        if self.muted == False:
-            self.muted = True
+        if self.__muted == False:
+            self.__muted = True
         else:
-            self.muted = False
+            self.__muted = False
 
     def channel_up(self):
-        if self.channel == self.max_channel:
-            self.channel = self.min_channel
+        if self.__channel == self.max_channel:
+            self.__channel = self.min_channel
         else:
-            self.channel += 1
+            self.__channel += 1
 
     def channel_down(self):
-        if self.channel == self.min_channel:
-            self.channel = self.max_channel
+        if self.__channel == self.min_channel:
+            self.__channel = self.max_channel
         else:
-            self.channel -= 1
+            self.__channel -= 1
 
     def volume_up(self):
-        if self.volume == self.max_volume:
-            self.volume = self.max_volume
+        if self.__volume == self.max_volume:
+            self.__volume = self.max_volume
         else:
-            self.volume += 1
+            self.__volume += 1
 
     def volume_down(self):
-        if self.volume == self.min_volume:
-            self.volume = self.min_volume
+        if self.__volume == self.min_volume:
+            self.__volume = self.min_volume
         else:
-            self.volume -= 1
+            self.__volume -= 1
 
     def __str__(self):
-        return f'Power = {self.status}, Channel = {self.channel}, Volume = {self.volume}'
+        return f'Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
