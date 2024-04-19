@@ -26,10 +26,11 @@ class Television:
         '''
         Toggle the muted status
         '''
-        if self.__muted == True:
-            self.__muted = False
-        else:
-            self.__muted = True
+        if self.__status == True:
+            if self.__muted == True:
+                self.__muted = False
+            else:
+                self.__muted = True
 
     def channel_up(self) -> None:
         '''
