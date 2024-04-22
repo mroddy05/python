@@ -10,8 +10,8 @@ class Television:
         '''
         self.__status: bool = False
         self.__muted: bool = False
-        self.__volume: int = self.min_volume
-        self.__channel: int = self.min_channel
+        self.__volume: int = Television.min_volume
+        self.__channel: int = Television.min_channel
 
     def power(self) -> None:
         '''
